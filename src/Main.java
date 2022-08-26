@@ -15,50 +15,40 @@ public class Main {
         int year = 2000;
         determineYear(year);
     }
-}
 
-//           Задание 2
-//        public static int getClientOS (String name){
-//            if (name.equals("iOS")) {
-//                return 0;
-//            } else {
-//                return 1;
-//            }
-//        }
+     //Задание 2
+    public static int getClientOS(String name, int clientDeviceYear) {
+        if (name.equals("iOS") && clientDeviceYear >= 2015) {
+            System.out.println("Установите обычную версию приложения для iOS по ссылке");
+        } else {
+            System.out.println("Установите обычную версию приложения для Android по ссылке");
+            if (name.equals("iOS") && clientDeviceYear < 2015) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            }
+        }
+    }
+    public static void main(String[] args) {
+        String name = "iOS";
+        int clientDeviceYear = 2018;
+        getClientOS(name, clientDeviceYear);
+    }
 
-//            public static void releaseYear(int clientDeviceYear) {
-//
-//                if (clientDeviceYear >= 2015) {
-//                } else {
-//                    String name1 = "iOS";
-//                    System.out.println("Установите обычную версию приложения для iOS по ссылке");
-//                }
-//                if (clientDeviceYear < 2015) {
-//                } else {
-//                    String name1 = "iOS";
-//                }
-//                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-//
-//                if (clientDeviceYear >= 2015) {
-//                } else {
-//                    String name2 = "Android";
-//                }
-//                System.out.println("Установите обычную версию приложения для Android по ссылке");
-//
-//                if (clientDeviceYear < 2015) {
-//                } else {
-//                    String name2 = "Android";
-//                }
-//                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-//            }
-//
-//
-//            public static void main(String[] args) {
-//                int clientDeviceYear = 2018;
-//                String name = "0";
-//                String name2 = "1";
-//                releaseYear(clientDeviceYear);
-//                releaseYear(clientDeviceYear);
-//            }
-//        }
-//
+      //Задание 3
+   public static void calculateTheNumberOfDays(int deliveryDistance) {
+        if (deliveryDistance <= 20) {
+        System.out.println("Потребуется один день");
+        }
+        if (deliveryDistance > 20 && deliveryDistance <= 60) {
+        System.out.println("Потребуется два дня");
+        }
+        if (deliveryDistance > 60 && deliveryDistance <= 100) {
+        System.out.println("Потребуется три дня");
+        }
+        }
+    public static void main(String[] args) {
+        int deliveryDistance = 95;
+        calculateTheNumberOfDays(deliveryDistance);
+        }
+        }
